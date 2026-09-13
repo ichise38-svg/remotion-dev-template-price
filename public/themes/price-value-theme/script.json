@@ -1,0 +1,49 @@
+{
+  "title": "PRICEとVALUEは違う",
+  "fps": 30,
+  "audio": "audio/scene1.mp3",
+  "audioDurationSeconds": 21.890612,
+  "totalFrames": 657,
+  "scenes": [
+    {
+      "id": "hook",
+      "name": "フック",
+      "detail": "株価が上がった=価値が上がった、と思っていませんか?",
+      "image": "images/scene2_mondai.jpg",
+      "revealAtSeconds": 0,
+      "startFrame": 0
+    },
+    {
+      "id": "mondai",
+      "name": "問題提起",
+      "detail": "価格は感情で動く数字。価値は会社の実力",
+      "image": "images/scene1_hook.jpg",
+      "revealAtSeconds": 6.055,
+      "startFrame": 182
+    },
+    {
+      "id": "data",
+      "name": "データ解説",
+      "detail": "価格が価値より高ければ割高、低ければ割安",
+      "image": "images/scene4_shisa.jpg",
+      "revealAtSeconds": 10.48,
+      "startFrame": 314
+    },
+    {
+      "id": "shisa",
+      "name": "示唆",
+      "detail": "値段より、何を持つ会社かを見る視点が大事",
+      "image": "images/scene2_mondai.jpg",
+      "revealAtSeconds": 15.137,
+      "startFrame": 454
+    },
+    {
+      "id": "cta",
+      "name": "CTA",
+      "detail": "見返せるように保存",
+      "cta": true,
+      "revealAtSeconds": 19.797,
+      "startFrame": 594
+    }
+  ]
+}
