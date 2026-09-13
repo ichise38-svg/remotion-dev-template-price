@@ -50,17 +50,24 @@ const SceneView: React.FC<{ scene: Scene; durationInFrames: number }> = ({
           </svg>
           <div
             style={{
-              color: "#FFFFFF",
-              fontSize: 52,
-              fontWeight: 900,
-              textAlign: "center",
-              fontFamily: "'Noto Sans CJK JP', sans-serif",
-              letterSpacing: 1,
-              textShadow:
-                "-2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 4px 12px rgba(0,0,0,0.6)",
+              backgroundColor: "#FFFFFF",
+              borderRadius: 24,
+              padding: "20px 40px",
+              boxShadow: "0 8px 24px rgba(0,0,0,0.5)",
             }}
           >
-            {scene.detail}
+            <div
+              style={{
+                color: "#0B1A33",
+                fontSize: 52,
+                fontWeight: 900,
+                textAlign: "center",
+                fontFamily: "'Noto Sans CJK JP', sans-serif",
+                letterSpacing: 1,
+              }}
+            >
+              {scene.detail}
+            </div>
           </div>
         </div>
       </AbsoluteFill>
@@ -107,18 +114,26 @@ const SceneView: React.FC<{ scene: Scene; durationInFrames: number }> = ({
       >
         <div
           style={{
-            color: "#FFFFFF",
-            fontSize: 42,
-            fontWeight: 900,
-            textAlign: "center",
-            fontFamily: "'Noto Sans CJK JP', sans-serif",
-            lineHeight: 1.5,
-            letterSpacing: 1,
-            textShadow:
-              "-2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 4px 12px rgba(0,0,0,0.6)",
+            backgroundColor: "#FFFFFF",
+            borderRadius: 24,
+            padding: "16px 32px",
+            boxShadow: "0 8px 24px rgba(0,0,0,0.5)",
+            maxWidth: "92%",
           }}
         >
-          {scene.detail}
+          <div
+            style={{
+              color: "#0B1A33",
+              fontSize: 38,
+              fontWeight: 900,
+              textAlign: "center",
+              fontFamily: "'Noto Sans CJK JP', sans-serif",
+              lineHeight: 1.5,
+              letterSpacing: 1,
+            }}
+          >
+            {scene.detail}
+          </div>
         </div>
       </div>
     </AbsoluteFill>
