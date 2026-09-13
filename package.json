@@ -26,5 +26,9 @@
     "prettier": "3.8.1",
     "typescript": "5.9.3"
   },
+  "overrides": {
+    "@remotion/renderer": "$remotion",
+    "@remotion/bundler": "$remotion"
+  },
   "private": true
 }
