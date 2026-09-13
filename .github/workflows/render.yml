@@ -1,0 +1,30 @@
+name: Render Reel
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Render video
+        run: npx remotion render src/index.ts PriceValueReel out/price-value-reel.mp4
+
+      - name: Upload video as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: price-value-reel
+          path: out/price-value-reel.mp4
