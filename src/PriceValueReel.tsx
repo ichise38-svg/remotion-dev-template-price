@@ -38,7 +38,7 @@ const SceneView: React.FC<{ scene: Scene; durationInFrames: number }> = ({
     return (
       <AbsoluteFill
         style={{
-          backgroundColor: "#000000",
+          backgroundColor: "#00FF00",
           justifyContent: "center",
           alignItems: "center",
           opacity,
@@ -56,6 +56,8 @@ const SceneView: React.FC<{ scene: Scene; durationInFrames: number }> = ({
               textAlign: "center",
               fontFamily: "'Noto Sans CJK JP', sans-serif",
               letterSpacing: 1,
+              textShadow:
+                "-2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 4px 12px rgba(0,0,0,0.6)",
             }}
           >
             {scene.detail}
@@ -70,7 +72,7 @@ const SceneView: React.FC<{ scene: Scene; durationInFrames: number }> = ({
   return (
     <AbsoluteFill
       style={{
-        backgroundColor: "#000000",
+        backgroundColor: "#00FF00",
         opacity,
         flexDirection: "column",
       }}
@@ -100,7 +102,7 @@ const SceneView: React.FC<{ scene: Scene; durationInFrames: number }> = ({
           justifyContent: "center",
           alignItems: "center",
           padding: "16px 40px",
-          backgroundColor: "#000000",
+          backgroundColor: "#00FF00",
         }}
       >
         <div
@@ -112,6 +114,8 @@ const SceneView: React.FC<{ scene: Scene; durationInFrames: number }> = ({
             fontFamily: "'Noto Sans CJK JP', sans-serif",
             lineHeight: 1.5,
             letterSpacing: 1,
+            textShadow:
+              "-2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 4px 12px rgba(0,0,0,0.6)",
           }}
         >
           {scene.detail}
@@ -123,7 +127,7 @@ const SceneView: React.FC<{ scene: Scene; durationInFrames: number }> = ({
 
 export const PriceValueReel: React.FC = () => {
   return (
-    <AbsoluteFill style={{ backgroundColor: "#000000" }}>
+    <AbsoluteFill style={{ backgroundColor: "#00FF00" }}>
       <Audio src={staticFile("themes/price-value-theme/audio/scene1.mp3")} />
 
       {scenes.map((scene, i) => {
