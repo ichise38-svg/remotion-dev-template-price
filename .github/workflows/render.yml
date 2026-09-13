@@ -21,12 +21,14 @@ jobs:
         run: npm install
 
       - name: Render video
-        env:
-          NODE_OPTIONS: --max-old-space-size=8192
-        run: npx remotion render src/index.ts PriceValueReel out/price-value-reel.mp4 --log=verbose
+        uses: remotion-dev/action@v4
+        with:
+          composition-id: PriceValueReel
+          entry-point: src/index.ts
+          output-name: price-value-reel.mp4
 
       - name: Upload video as artifact
         uses: actions/upload-artifact@v4
         with:
           name: price-value-reel
-          path: out/price-value-reel.mp4
+          path: price-value-reel.mp4
