@@ -4,8 +4,6 @@ import {
   Img,
   Sequence,
   staticFile,
-  useCurrentFrame,
-  interpolate,
 } from "remotion";
 import script from "./data/script.json";
 
@@ -21,19 +19,7 @@ type Scene = {
 const scenes = script.scenes as Scene[];
 const totalFrames = script.totalFrames as number;
 
-const SceneView: React.FC<{ scene: Scene; durationInFrames: number }> = ({
-  scene,
-  durationInFrames,
-}) => {
-  const frame = useCurrentFrame();
-
-  const opacity = interpolate(
-    frame,
-    [0, 12, durationInFrames - 12, durationInFrames],
-    [0, 1, 1, 0],
-    { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
-  );
-
+const SceneView: React.FC<{ scene: Scene }> = ({ scene }) => {
   if (scene.cta) {
     return (
       <AbsoluteFill
@@ -41,7 +27,6 @@ const SceneView: React.FC<{ scene: Scene; durationInFrames: number }> = ({
           backgroundColor: "#00FF00",
           justifyContent: "center",
           alignItems: "center",
-          opacity,
         }}
       >
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 24 }}>
@@ -80,7 +65,6 @@ const SceneView: React.FC<{ scene: Scene; durationInFrames: number }> = ({
     <AbsoluteFill
       style={{
         backgroundColor: "#00FF00",
-        opacity,
         flexDirection: "column",
       }}
     >
@@ -150,7 +134,7 @@ export const PriceValueReel: React.FC = () => {
         const duration = Math.max(1, nextStart - scene.startFrame);
         return (
           <Sequence key={scene.id} from={scene.startFrame} durationInFrames={duration}>
-            <SceneView scene={scene} durationInFrames={duration} />
+            <SceneView scene={scene} />
           </Sequence>
         );
       })}
