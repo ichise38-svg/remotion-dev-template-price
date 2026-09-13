@@ -24,7 +24,7 @@ jobs:
         run: df -h
 
       - name: Bundle
-        run: npx remotion bundle src/index.ts --output=./build
+        run: npx remotion bundle src/index.ts --output=./build --log=verbose
 
       - name: List build output
         run: ls -la ./build
