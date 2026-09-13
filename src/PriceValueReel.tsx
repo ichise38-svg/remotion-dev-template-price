@@ -38,7 +38,7 @@ const SceneView: React.FC<{ scene: Scene; durationInFrames: number }> = ({
     return (
       <AbsoluteFill
         style={{
-          backgroundColor: "#0B1A33",
+          backgroundColor: "#000000",
           justifyContent: "center",
           alignItems: "center",
           opacity,
@@ -50,23 +50,15 @@ const SceneView: React.FC<{ scene: Scene; durationInFrames: number }> = ({
           </svg>
           <div
             style={{
-              backgroundColor: "#FFFFFF",
-              borderRadius: 24,
-              padding: "20px 40px",
-              boxShadow: "0 8px 24px rgba(0,0,0,0.35)",
+              color: "#FFFFFF",
+              fontSize: 52,
+              fontWeight: 900,
+              textAlign: "center",
+              fontFamily: "'Noto Sans CJK JP', sans-serif",
+              letterSpacing: 1,
             }}
           >
-            <div
-              style={{
-                color: "#0B1A33",
-                fontSize: 48,
-                fontWeight: 700,
-                textAlign: "center",
-                fontFamily: "sans-serif",
-              }}
-            >
-              {scene.detail}
-            </div>
+            {scene.detail}
           </div>
         </div>
       </AbsoluteFill>
@@ -78,7 +70,7 @@ const SceneView: React.FC<{ scene: Scene; durationInFrames: number }> = ({
   return (
     <AbsoluteFill
       style={{
-        backgroundColor: "#0B1A33",
+        backgroundColor: "#000000",
         opacity,
         flexDirection: "column",
       }}
@@ -108,30 +100,21 @@ const SceneView: React.FC<{ scene: Scene; durationInFrames: number }> = ({
           justifyContent: "center",
           alignItems: "center",
           padding: "16px 40px",
-          backgroundColor: "#0B1A33",
+          backgroundColor: "#000000",
         }}
       >
         <div
           style={{
-            backgroundColor: "#FFFFFF",
-            borderRadius: 24,
-            padding: "20px 36px",
-            boxShadow: "0 8px 24px rgba(0,0,0,0.35)",
-            maxWidth: "92%",
+            color: "#FFFFFF",
+            fontSize: 42,
+            fontWeight: 900,
+            textAlign: "center",
+            fontFamily: "'Noto Sans CJK JP', sans-serif",
+            lineHeight: 1.5,
+            letterSpacing: 1,
           }}
         >
-          <div
-            style={{
-              color: "#0B1A33",
-              fontSize: 36,
-              fontWeight: 700,
-              textAlign: "center",
-              fontFamily: "sans-serif",
-              lineHeight: 1.35,
-            }}
-          >
-            {scene.detail}
-          </div>
+          {scene.detail}
         </div>
       </div>
     </AbsoluteFill>
