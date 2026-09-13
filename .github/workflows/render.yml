@@ -30,7 +30,7 @@ jobs:
         run: ls -la ./build
 
       - name: Render video
-        run: npx remotion render ./build/index.html PriceValueReel out/price-value-reel.mp4
+        run: npx remotion render ./build PriceValueReel out/price-value-reel.mp4
 
       - name: Upload video as artifact
         uses: actions/upload-artifact@v4
